@@ -1,0 +1,147 @@
+html.ins-panel-open,
+html.ins-panel-open body {
+    overflow: hidden
+}
+
+.ins-lay2-container .ins-inner {
+    background: #fff;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 100000;
+    width: 600px;
+    transition: .5s ease;
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-sizing: border-box
+}
+
+.ins-lay2-container.panel-open .ins-inner {
+    transform: translate(0, 0%) !important;
+    border-right: 0 !important
+}
+
+.ins-lay2-container.ins-position-right .ins-inner {
+    transform: translate(100%, 0);
+    right: 0
+}
+
+.ins-lay2-container.ins-position-left .ins-inner {
+    transform: translate(-100%, 0);
+    left: 0
+}
+
+.ins-lay2-container .ins-close {
+    position: absolute;
+    cursor: pointer;
+    padding: 4px;
+    width: 26px;
+    right: 20px
+}
+
+.ins-lay2-container .ins-inner .ins-inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%
+}
+
+.ins-lay2-container .ins-header {
+    text-align: center;
+    padding: 5px 0 30px
+}
+
+.ins-lay2-container .ins-header h3 {
+    font-size: 24px;
+    color: #333;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 30px;
+    padding: 0
+}
+
+.ins-lay2-container .ins-header h3 svg {
+    width: 24px;
+    vertical-align: middle;
+    margin: 0 10px 6px 0;
+    padding: 0
+}
+
+.ins-lay2-container .ins-body {
+    text-align: center;
+    color: #333
+}
+
+.ins-lay2-container .ins-header .ins-my-auto {
+    margin: auto 0;
+    text-align: center;
+    color: #333
+}
+
+.ins-lay2-container .ins-body .ins-my-auto {
+    margin: auto 0
+}
+
+.ins-lay2-container .ins-body h4 {
+    font-size: 18px
+}
+
+.ins-lay2-container .ins-footer {
+    padding: 10px 10px 20px;
+    text-align: center
+}
+
+.ins-lay2-container .ins-footer p {
+    color: #333;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0 0 30px
+}
+
+.ins-footer .footer-button {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: calc(50% - 5px) calc(50% - 5px)
+}
+
+.ins-lay2-container .ins-footer a {
+    background: #fff;
+    display: block;
+    text-align: center;
+    padding: 7px 20px;
+    text-decoration: none !important;
+    border: 1px solid #e9570a;
+    color: #e9570a;
+    font-size: 14px;
+    transition: .3s
+}
+
+.ins-lay2-container .ins-footer a:hover {
+    background: #e9570a;
+    color: #fff
+}
+
+.ins-lay2-container .ins-footer a:nth-child(1) {
+    background: #e9570a;
+    border: 1px solid #e9570a;
+    color: #fff
+}
+
+.ins-lay2-container .ins-footer a:nth-child(1):hover {
+    background: #fff;
+    color: #e9570a
+}
+
+@media (max-width:767px) {
+    .ins-lay2-container .ins-inner {
+        width: 100%
+    }
+}
+
+@media (max-width:470px) {
+    .ins-lay2-container .ins-cart-button.ins-position-right-bottom.open {
+        display: none
+    }
+}
